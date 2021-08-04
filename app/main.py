@@ -80,6 +80,13 @@ async def sex_survived():
     return JSONResponse(content=Response_json().sex_survived(X,y), headers= {"Access-Control-Allow-Origin":"*"})
 
 
+@app.get("/pclass_survived")
+async def pclass_survived():
+    # transforme le dico en json
+    # autorise l'extérieur à récupérer les données de l'API
+    return JSONResponse(content=Response_json().pclass_survived(X,y), headers= {"Access-Control-Allow-Origin":"*"})
+
+
 if __name__ == "__main__":
     uvicorn.run(app, host="0.0.0.0", port=8000)
 

@@ -24,7 +24,7 @@ Etapes du projet :
                 soit les écrire manuellement
                 soit 	py -m pip freeze > requirements.txt
                         py -m pip install -r requirements.txt (d'après lecture, à manipuler avec précaution - A VERIFIER)
-            - setup.py (transforme la librairie en package). Utilise la bibliothèque setuptools. 
+            - setup.py (transforme la librairie en package). Ne pas supprimer. Utilise la bibliothèque setuptools. 
                 from setuptools import setup
                     setup(
                         name='pkg_model_ml', # choisir le nom que l'on souhaite
@@ -47,7 +47,7 @@ Etapes du projet :
 
 # Créer le modèle de Machine Learning
 
-3. Ecrire tout le code dans un Jupyter
+3. Ecrire tout le code dans un notebook. Le notebook doit être placé au même que le package installé dans setup.py.
 4. Factoriser et organiser le code en implémentant les fonctions créees dans les classes (fichiers.py)
 5. Tester le code, avec notamment ipython dans le Terminal. Pour importer les modules créés, on doit se trouver dans le bon sous-dossier. 
         ipython
@@ -62,7 +62,14 @@ Utilisation de FastAPI et Uvicorn
 
 # Docker
 
-1. Ne pas oublier de créer le Dockerfile.
-2. Créer l'image
-    docker build -t python fastapi-app .
+1. Ne pas oublier de créer le fichier Dockerfile.
+2. Installer Docker si ce n'est pas déjà fait. Sur Windows, les pré-requis : .NET Framework à jour, WSL2 et Virtualisation activée.
+3. Créer l'image à partir du fichier Dockerfile 
+    docker build -t python-fastapi . # python-fastapi : c'est le nom de l'image # ne pas oublier le point à la fin
+4. Lancer l'image
+    docker run -dp 8000:8000 python-fastapi
+
+
+
+
 

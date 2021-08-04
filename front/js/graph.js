@@ -44,11 +44,56 @@ Highcharts.getJSON(url + "sex_survived",
     })
   }
 );
-Highcharts.getJSON(url + "games/type",
+
+// viz pclass survived
+
+Highcharts.getJSON(url + "pclass_survived",
+  function (data) {
+    const platform = data.map(d => [d.name,  d.pourcent]);
+
+    Highcharts.chart('my_second_graph', {
+      chart: {
+        plotBackgroundColor: null,
+        plotBorderWidth: null,
+        plotShadow: false,
+        type: 'pie'
+      },
+      title: {
+        text: 'Plateformes présentes dans les prochaine sortie'
+      },
+      tooltip: {
+        pointFormat: '{series.name}: <b>{point.percentage:.1f}%</b>'
+      },
+      accessibility: {
+        point: {
+          valueSuffix: '%'
+        }
+      },
+      plotOptions: {
+        pie: {
+          allowPointSelect: true,
+          cursor: 'pointer',
+          dataLabels: {
+            enabled: false
+          },
+          showInLegend: true
+        }
+      },
+      series: [{
+        name: 'Console',
+        colorByPoint: true,
+        data: platform
+      }]
+    })
+  }
+);
+
+// exemple
+Highcharts.getJSON(url + "pclass_survived0",
   function (data)
   {
     const type = data.map(d => [d.genre,  d.nombres]);
-    Highcharts.chart('my_second_graph',
+    Highcharts.chart('my_fourth_graph',
     {
       chart: {
         type: 'column'

@@ -1,5 +1,5 @@
 import sys
-sys.path.append("..")
+# sys.path.append("..")
 from fastapi import FastAPI
 import uvicorn
 from package_ml.get_data import Data

@@ -8,4 +8,4 @@ class Data:
 
     # import et transformation du fichier en dataframe
     def get_data(self):
-        return pd.read_csv(f"../data/{self.file_name}.csv")
+        return pd.read_csv(f"https://raw.githubusercontent.com/Adriengith/titanicazertyui/master/titanicazertyui/data/{self.file_name}.csv")

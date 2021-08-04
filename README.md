@@ -64,5 +64,5 @@ Utilisation de FastAPI et Uvicorn
 
 1. Ne pas oublier de créer le Dockerfile.
 2. Créer l'image
-    docker build -t fastapi-app .
+    docker build -t python fastapi-app .
 

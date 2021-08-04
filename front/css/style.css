@@ -1,0 +1,48 @@
+a{
+  text-decoration: none;
+  color: #fff;
+}
+body {
+  color: #fff;
+  background-color: #051116;
+  text-align: center;
+  }
+
+.my_navbar {
+    background-color: rgba(0, 0, 0, 0.712);
+    width: 100%;
+    left: 0%;
+    right: 0%;
+    top: 0%;
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    height: 80px;
+    }
+
+.button {
+    display: inline-block;
+    -webkit-box-sizing: border-box;
+    -moz-box-sizing: border-box;
+    box-sizing: border-box;
+    border: none;
+    color: rgb(255, 255, 255);
+    text-decoration: normal;
+    text-align: center;
+    -o-text-overflow: clip;
+    text-overflow: clip;
+    white-space: pre;
+    -webkit-transition: all 200ms cubic-bezier(0.42, 0, 0.58, 1);
+    -moz-transition: all 200ms cubic-bezier(0.42, 0, 0.58, 1);
+    -o-transition: all 200ms cubic-bezier(0.42, 0, 0.58, 1);
+    transition: all 200ms cubic-bezier(0.42, 0, 0.58, 1);
+    text-shadow: 0 0 1px #ffffff ,0 0 2px #d1d1d1 , 0 0 3px #c7c7c7 , 0 0 4px #949494 , 0 0 5px #5f5f5f ;
+  }
+
+  .button:hover {
+    color: #ffffff;
+    text-shadow: 0 0 1px #ffffff ,0 0 2px #ffd45e , 0 0 5px #ffbb00 , 0 0 8px #ff6600 , 0 0 12px #ff2600 ;
+  }
+  .corpse{
+    color: rgb(255, 255, 255);
+}

@@ -4,6 +4,8 @@ import numpy as np
 class Model:
     def __init__(self, df):
         self.df = df
+        self.total_dead = 0
+        self.total_alive = 0
 
     def X_features_drop(self, list_columns):
         return self.df.drop(columns = list_columns,axis=1)
@@ -19,10 +21,14 @@ class Model:
         input_data_reshaped = input_data_as_numpy_array.reshape(1,-1)
         prediction = model.predict(input_data_reshaped)
         if prediction[0]==0:
-            return "Dead"
+            self.total_dead += 1
+            return "Cet individu n'aurait pas survécu"
         if prediction[0]==1:
-            return "Alive"
+            self.total_alive += 1
+            return "Cet individu aurait survécu"
 
+    def return_json_prediction(self):
+        return [{"name":"Nombre de survivants de nos prédictions","pourcent":self.total_alive},{"name":"Nombre de morts de nos prédictions", "pourcent":self.total_dead}]
 
 
 

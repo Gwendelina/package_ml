@@ -3,9 +3,13 @@ a{
   color: #fff;
 }
 body {
-  color: #fff;
+  color: white;
   background-color: #051116;
   text-align: center;
+  background-image:url(titanic.jpg);
+  margin:0;
+  background-repeat:no-repeat;
+  background-attachment: fixed;
   }
 
 .my_navbar {

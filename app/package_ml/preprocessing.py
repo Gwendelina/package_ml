@@ -22,5 +22,5 @@ class Preprocessing:
 
 
 
-# titanic_data.replace({'Sex':{'male':0,'female':1}, 'Embarked':{'S':0,'C':1,'Q':2}}, inplace=True)
+#titanic_data.replace({'Sex':{'male':0,'female':1}, 'Embarked':{'S':0,'C':1,'Q':2}}, inplace=True)
 #titanic_data= titanic_data.drop(columns = ['PassengerId','Name','Ticket','Survived'],axis=1)

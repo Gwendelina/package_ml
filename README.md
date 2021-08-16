@@ -62,7 +62,7 @@ Utilisation de FastAPI et Uvicorn
 
 # Docker : create image/container in localhost (vérifier s'il est nécessaire de créer un Docker en local quand on met en production avec Azure puisqu'il faut recréer une image avec le lien du container Azure)
 
-1. Ne pas oublier de créer le fichier Dockerfile.
+1. Ne pas oublier de créer le fichier Dockerfile : This will give Docker all the instructions to build our container image
 2. Installer Docker si ce n'est pas déjà fait. Sur Windows, les pré-requis : .NET Framework à jour, WSL2 et Virtualisation activée.
 3. Créer l'image à partir du fichier Dockerfile 
     docker build -t python-fastapi . # python-fastapi : c'est le nom de l'image # ne pas oublier le point à la fin
@@ -78,8 +78,11 @@ Utilisation de FastAPI et Uvicorn
 3. On fait en sorte que les utilisateurs puissent télécharger le package avec un pip install : installer PyPi + compte utilisateur + twine (commande : twine upload dist/*). Pour tester, il suffit de changer le n° de version dans le fichier setup.py et supprimer l'ancienne version téléchargée (pip uninstall nomdupackage), sinon cela fait conflit.
 4. Use Azure Container Registry (ACR) to store your container (create with Docker) in the Azure cloud and push this new version in Azure (app service) 
     - https://portal.azure.com/#home : Go to Create a new resource -> Containers -> Container Registry
-    - go to your Container registry (titanicpackagegna) and get Login server in Access keys (Admin user Enabled)
-    - create a new image with the url of Azure (created by container registry) : docker build -t titanicml.azurecr.io/docker_container
+    - go to your Container registry (titanicpackagegna) and get Login server in Access keys (Admin user must be "Enabled")
+	- Authenticate to ACR : docker login nameofLoginServer and indicate password
+	  /!\ si on veut utiliser l'invite de commande Ubuntu, dans Docker Desktop, veiller à ce que les options suivantes soient cochées : General -> "Expose daemon on..." + Resources -> "WSL integration" -> Ubuntu
+    - create a new image with the url of Azure created by container registry) : 		
+		docker build -t titanicml.azurecr.io/docker_container
 
 
 

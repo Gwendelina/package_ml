@@ -1,11 +1,11 @@
 import sys
 from fastapi import FastAPI
 import uvicorn
-from package_ml.response_json import Response_json
+from titanicpackagegna.response_json import Response_json
 import warnings
 warnings.filterwarnings("ignore")
 from fastapi.responses import JSONResponse
-from package_ml.controler import controler
+from titanicpackagegna.controler import controler
 
 
 model, ml, X, y = controler()

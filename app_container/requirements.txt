@@ -1,0 +1,6 @@
+fastapi
+gunicorn
+pandas
+sklearn
+titanicpackagegna
+uvicorn

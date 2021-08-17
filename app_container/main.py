@@ -40,5 +40,5 @@ async def age_survived():
     return JSONResponse(content=Response_json().age_survived(X,y), headers= {"Access-Control-Allow-Origin":"*"})
 
 
-if __name__ == "__main__":
-    uvicorn.run(app, host="0.0.0.0", port=8000)
+# if __name__ == "__main__":
+#     uvicorn.run(app, host="0.0.0.0", port=8000)

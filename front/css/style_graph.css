@@ -18,7 +18,7 @@ body{
   .highcharts-data-table caption {
     padding: 1em 0;
     font-size: 1.2em;
-    color: #555;
+    color: #555; 
   }
   .highcharts-data-table th {
     font-weight: 600;
@@ -28,10 +28,10 @@ body{
     padding: 0.5em;
   }
   .highcharts-data-table thead tr, .highcharts-data-table tr:nth-child(even) {
-    background: #f8f8f8;
+    background-color: white; 
   }
   .highcharts-data-table tr:hover {
-    background: #f1f7ff;
+    background: white;
   }
 
 .highcharts-figure, .highcharts-data-table table {
@@ -66,8 +66,8 @@ body{
   padding: 0.5em;
 }
 .highcharts-data-table thead tr, .highcharts-data-table tr:nth-child(even) {
-  background: #f8f8f8;
+  background:white;
 }
 .highcharts-data-table tr:hover {
-  background: #f1f7ff;
+  background: white;
 }

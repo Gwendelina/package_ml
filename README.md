@@ -114,7 +114,7 @@ Notre container contient l'api et notre package (modèle ML)
 	- *RUN* : exécute l'installation des dépendances nécessaires au fonctionnement de l'image 
 	- *COPY* : récupère les dossiers/fichiers dont on a besoin pour constituer l'image et les ajoute dans l'image
 	- *EXPOSE* : port écouté par le container
-	- *CMD* : définit la commande par défaut qui va s'executer au démarrage du container. Ici, lancement de guvicorn via un fichier de config.py qui permet de lancer l'image sur un serveur web/local ?
+	- *CMD* : définit la commande par défaut qui va s'executer au démarrage du container. Ici, lancement de guvicorn via un fichier de config.py qui permet de lancer l'image sur un serveur.
 
 3. Créer l'image : 
 
